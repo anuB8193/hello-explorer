@@ -22,7 +22,7 @@ body {
 /* Header styling */
 header h1 {
     font-size: 3rem;
-    margin: 0.5rem 0;
+    margin: 1rem 0;
     color: #ffffff;
 }
 
@@ -32,34 +32,37 @@ p {
     line-height: 1.5;
     margin: 1rem 0;
     color: #dddddd;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Navigation container */
 .navigation {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 40px; /* Adds more space between the circles */
     margin-top: 2rem;
 }
 
 /* Navigation links (circles) */
 .navigation a {
     display: inline-block;
-    width: 80px; /* Shrinking the circle size */
-    height: 80px;
+    width: 100px; /* Shrinking the circle size */
+    height: 100px;
     border-radius: 50%;
     background-color: #3a3a3a;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
 /* Navigation images inside links */
 .navigation a img {
-    width: 50px; /* Smaller image size */
-    height: 50px;
-    border-radius: 50%;
+    width: 60px; /* Adjusted image size */
+    height: 60px;
+    border-radius: 50%; /* Makes the image circular */
     object-fit: cover; /* Ensures the image scales correctly */
 }
 
@@ -67,9 +70,32 @@ p {
 .navigation a.active {
     border: 3px solid #ffffff; /* White border for active page */
     transform: scale(1.1);
+    background-color: #444444;
 }
 
 /* Hover effect for navigation links */
 .navigation a:hover {
     transform: scale(1.2);
+    background-color: #555555;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .navigation a {
+        width: 80px; /* Shrinks circles for smaller screens */
+        height: 80px;
+    }
+
+    .navigation a img {
+        width: 50px;
+        height: 50px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
 }
