@@ -48,8 +48,8 @@ p {
 /* Navigation links (circles) */
 .navigation a {
     display: inline-block;
-    width: 100px; /* Shrinking the circle size */
-    height: 100px;
+    width: 120px; /* Slightly larger circles */
+    height: 120px;
     border-radius: 50%;
     background-color: #3a3a3a;
     display: flex;
@@ -60,15 +60,15 @@ p {
 
 /* Navigation images inside links */
 .navigation a img {
-    width: 60px; /* Adjusted image size */
-    height: 60px;
+    width: 80px; /* Larger image size */
+    height: 80px;
     border-radius: 50%; /* Makes the image circular */
     object-fit: cover; /* Ensures the image scales correctly */
 }
 
 /* Active page style */
 .navigation a.active {
-    border: 3px solid #ffffff; /* White border for active page */
+    border: 2px solid #ffffff; /* Smaller border around active image */
     transform: scale(1.1);
     background-color: #444444;
 }
@@ -82,13 +82,13 @@ p {
 /* Responsive Design */
 @media (max-width: 600px) {
     .navigation a {
-        width: 80px; /* Shrinks circles for smaller screens */
-        height: 80px;
+        width: 100px; /* Adjusted for smaller screens */
+        height: 100px;
     }
 
     .navigation a img {
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
     }
 
     header h1 {
