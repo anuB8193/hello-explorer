@@ -11,23 +11,33 @@ body {
     height: 100vh;
 }
 
+/* Container for the content */
 .container {
     text-align: center;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #2a2a2a;
+    width: 90%;
+    max-width: 600px;
 }
 
+/* Header styling */
 header h1 {
     font-size: 3rem;
     margin: 0.5rem 0;
+    color: #ffffff;
 }
 
+/* Paragraph styling */
 p {
     font-size: 1rem;
+    line-height: 1.5;
     margin: 1rem 0;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    color: #dddddd;
 }
 
+/* Navigation container */
 .navigation {
     display: flex;
     justify-content: center;
@@ -35,6 +45,7 @@ p {
     margin-top: 2rem;
 }
 
+/* Navigation links (circles) */
 .navigation a {
     display: inline-block;
     width: 100px;
@@ -44,9 +55,10 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
+/* Navigation images inside links */
 .navigation a img {
     width: 100%;
     height: 100%;
@@ -54,11 +66,29 @@ p {
     object-fit: cover; /* Ensures the image scales correctly within the circle */
 }
 
+/* Active page style */
 .navigation a.active {
     border: 3px solid #f5f5f5;
     transform: scale(1.1);
+    background-color: #444444;
 }
 
+/* Hover effect for navigation links */
 .navigation a:hover {
     transform: scale(1.2);
+    background-color: #555555;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .navigation a {
+        width: 80px;
+        height: 80px;
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
 }
